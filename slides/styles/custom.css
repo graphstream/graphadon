@@ -11,7 +11,7 @@
     font-weight: bold;
   }
 .information {
-    @apply bg-red-100 border-l-4 margin-t-100 border-green-500 text-green-700 p-4;
+    @apply bg-gray-100 border-l-4 margin-t-100 border-green-500 text-green-800 p-4;
     font-weight: bold;
   }
 

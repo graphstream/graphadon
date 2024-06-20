@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Merriweather:ital,wght@1,300;1,700&display=swap');
 :root {
     --slidev-slide-container-background: white;
-    --slidev-code-font-size: 0.5em;
+    --slidev-code-font-size: 1rem;
     --slidev-code-line-height: 1.4;
     --slidev-code-margin: 0;
-    --slidev-code-padding: 1em 1.2em;
-    --slidev-code-radius: 0.3em;
+    --slidev-code-padding: 1em 1em;
+    --slidev-code-radius: 0.5em;
     --slidev-controls-foreground: #333;
   }
   
@@ -29,7 +29,7 @@
     --quote-font-family: "Merriweather", serif;
     font-family: var(--font-family);
     font-feature-settings: 'calt', 'liga', 'case', 'ss02', 'ss03';
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: normal;
     
     p{
@@ -54,10 +54,10 @@
      * @apply border-1 border-[#ddd] rounded-xl shadow-2xl transform scale-90;
      */
 
-     h1 { @apply text-[70px] leading-[1.4] }
-     h2 { @apply text-5xl leading-[1.4] }
-     h3 { @apply text-4xl leading-[1.4] }
-     h4 { @apply text-3xl leading-[1.6] }
+     h1 { @apply text-[70px] leading-[1.4] b}
+     h2 { @apply text-4xl leading-[1.4] }
+     h3 { @apply text-3xl leading-[1.4] }
+     h4 { @apply text-2xl leading-[1.6] }
      h5 { @apply text-[20px] leading-[1.6] }
 
      h1, h2, h3, h4, h5, h6 {
@@ -97,3 +97,4 @@
       }
     }
   }
+
