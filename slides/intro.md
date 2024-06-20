@@ -430,13 +430,13 @@ node {
   <img src="/img/size_mode2_.png" alt="CSS1" />
 </div>
 <div class="">
-  <img src="img/stroke_mode2.png" alt="CSS2" />
+  <img src="/img/stroke_mode2.png" alt="CSS2" />
 </div>
 <div class="">
-  <img src="img/edge_shape1.png" alt="CSS3" />
+  <img src="/img/edge_shape1.png" alt="CSS3" />
 </div>
 <div class="">
-  <img src="img/node_shape6.png" alt="CSS4" />
+  <img src="/img/node_shape6.png" alt="CSS4" />
 </div>
 </div>
 
