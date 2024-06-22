@@ -40,7 +40,7 @@ layout: two-cols
 ::right ::
 <!-- centered image vertical and horizontal -->
 <div class="flex items-center justify-center">
-  <img src="img/Community_Structure2.png" alt="Community Structures" style="width: 80%;">
+  <img src="/img/Community_Structure2.png" alt="Community Structures" style="width: 80%;">
 </div>
 <!-- ![Community Structures](img/Community_Structure2.png) -->
 
@@ -60,10 +60,10 @@ Lots of complex networks exhibit community structure.
 
 <!-- 4 images side by side, with space -->
 <div class="flex justify-between">
-  <img src="img/Community_Structure1.png" alt="Community Structures" style="width: 20%;">
-  <img src="img/Community_Structure3.png" alt="Community Structures" style="width: 20%;">
-  <img src="img/Community_Structure4.png" alt="Community Structures" style="width: 20%;">
-  <img src="img/Network_Community_Structure.svg" alt="Community Structures" style="width: 20%;">
+  <img src="/img/Community_Structure1.png" alt="Community Structures" style="width: 20%;">
+  <img src="/img/Community_Structure3.png" alt="Community Structures" style="width: 20%;">
+  <img src="/img/Community_Structure4.png" alt="Community Structures" style="width: 20%;">
+  <img src="/img/Network_Community_Structure.svg" alt="Community Structures" style="width: 20%;">
 </div>
 <!-- ![CS3](img/Network_Community_Structure.svg)![CS1](img/Community_Structure1.png)![CS2](img/Community_Structure3.png)![CS3](img/Community_Structure4.png) -->
 
@@ -122,7 +122,7 @@ Modularity gives results in $\left[-\frac{1}{2} .. 1\right]$.
 - Outside links $O_c$ go out of the community $c$
 - Total number of links $m$ in the network
 
-![Modularirty](img/Modularity2.svg)
+![Modularirty](/img/Modularity2.svg)
 
 
 ---
@@ -132,7 +132,7 @@ Modularity gives results in $\left[-\frac{1}{2} .. 1\right]$.
 
 Compare the ratio $\frac{I_c}{m}$ with the expected value in the same network but with all its links randomly rewired (configuration model)
 
-$\left( \frac{2I_c + O_c}{2m} \right)^2~~~~~~~~$ ![Modularity](img/Modularity3.svg)
+$\left( \frac{2I_c + O_c}{2m} \right)^2~~~~~~~~$ ![Modularity](/img/Modularity3.svg)
 
 
 
@@ -165,8 +165,8 @@ Most layout algorithms are **force based**:
 
 <!-- 2 images side by side -->
 <div class="flex justify-between">
-  <img src="img/polbooks_fr.png" alt="Layout" style="width: 40%;">
-  <img src="img/LinLog1.png" alt="LinLog Layout" style="width: 40%;">
+  <img src="/img/polbooks_fr.png" alt="Layout" style="width: 40%;">
+  <img src="/img/LinLog1.png" alt="LinLog Layout" style="width: 40%;">
 </div>
 
 
@@ -224,7 +224,7 @@ GraphStream puts the display of the graph in a separate **thread** or **process*
 
 Usually the display will evolve in **parallel** of the main application  running on the graph.
 
-![GraphNetwork Viewer](img/proxy-pipeline.svg)
+![GraphNetwork Viewer](/img/proxy-pipeline.svg)
 
 
 ---
@@ -235,13 +235,13 @@ Usually the display will evolve in **parallel** of the main application  running
 By default the viewer creates another thread to handle the layout.
 The default Layout algorithm is a derivative of the Frutcherman-Reingold one.
 
-![Default Viewer and Layout](img/layout-viewer-pipeline.svg)
+![Default Viewer and Layout](/img/layout-viewer-pipeline.svg)
 
 ---
 
 ## Our Pipeline
 
-![Self-Maintained-Layout Pipeline](img/layout-in-graph-pipeline.svg)
+![Self-Maintained-Layout Pipeline](/img/layout-in-graph-pipeline.svg)
 
 ---
 
@@ -341,7 +341,7 @@ Let's fix this:
 
 ----
 
-![Self-Maintained-Layout Pipeline with Interaction](img/layout-in-graph-2-pipeline.svg)
+![Self-Maintained-Layout Pipeline with Interaction](/img/layout-in-graph-2-pipeline.svg)
 
 
 ----
@@ -714,5 +714,5 @@ The `LinLogLayoutAndBoids.java` file in the ` modularity` package contains a wor
 
 <!-- image at bottom center of page -->
 <div class="absolute  flex justify-center z--1">
-  <img src="img/boids.png" alt="Boids Simulation" style="width: 90%;">
+  <img src="/img/boids.png" alt="Boids Simulation" style="width: 90%;">
 </div>
