@@ -54,6 +54,17 @@ html.dark {
   --prism-selection-background: #444444;
 }
 
+
+.slidev-code .slidev-code-highlighted {
+}
+.slidev-code .slidev-code-dishonored {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+
+
+
 pre[class*='language-'] {
   @apply p-2;
 }

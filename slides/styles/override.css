@@ -49,12 +49,9 @@
       border-radius: 0.25em;
       background: #f5f5f5;
     }
-    /**
-     * screenshot box-shadow style
-     * @apply border-1 border-[#ddd] rounded-xl shadow-2xl transform scale-90;
-     */
 
-     h1 { @apply text-[70px] leading-[1.4] b}
+
+     h1 { @apply text-[70px] leading-[1.4] }
      h2 { @apply text-4xl leading-[1.4] }
      h3 { @apply text-3xl leading-[1.4] }
      h4 { @apply text-2xl leading-[1.6] }

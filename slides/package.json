@@ -20,5 +20,8 @@
     "addons": [
       "slidev-addon-qrcode"
     ]
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.44.1"
   }
 }

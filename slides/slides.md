@@ -55,9 +55,13 @@ src: ./intro.md
 
 
 ---
-<!-- src: ./tutorials.md -->
+# First Tutorials
+---
+
+---
+src: ./tutorials.md
 ---
 
 --- 
-<!-- src: ./communities.md -->
+src: ./communities.md
 --- 
