@@ -1,10 +1,5 @@
 ---
 theme : ./
-#layout: center
-# the image source
-# image: /img/gs-logo-white.svg
-
-# background: /img/gs-logo-white.svg
 ---
 
 <p class="text-[70px] leading-[1.4] font-bold"> Dynamic Graphs </p>
@@ -51,11 +46,6 @@ Slides : [graphstream.github.io/graphadon](https://graphstream.github.io/graphad
 
 ---
 src: ./intro.md
----
-
-
----
-# First Tutorials
 ---
 
 ---

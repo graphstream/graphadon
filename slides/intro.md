@@ -566,7 +566,3 @@ dn A
 - Agents can receive and use them to take their decisions
 
 ![NetLogo Extension](/img/netlogo.jpg)
-
-
-
-<!-- END -->

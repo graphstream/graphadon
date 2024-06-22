@@ -1,5 +1,13 @@
+---
+theme : ./
+---
+<p class="text-[70px] leading-[1.4] font-bold"> Dynamic Graphs </p>
 
+<p class="text-[40px] "> Tutorials </p>
 
+<p class="text-[40px] leading-[1.4] "> Graphadon Summer School </p>
+
+---
 
 ## Outline
 
@@ -10,24 +18,22 @@
 
 ## Installation
 
-- Download the Tutorial workspace
+- Download the tutorial sources
 - Get an IDE (Eclipse, IntelliJ, NetBeans, etc.)
-- Open the workspace in the IDE
+- Open the tutorial sources in the IDE
 
 ---
 
 
-## Get the tutorial workspace
+## Get the tutorial sources
 - Go to the tutorial page at github:
-[github.com/graphstream/graphadon](github.com/graphstream/graphadon)
+[github.com/graphstream/graphadon](https://github.com/graphstream/graphadon)
 - Get the code:
-    - with the "Download Zip" button on github (will download an archive)
-    - or through git:
-
-```sh
-git clone https://github.com/graphstream/graphadon.git
-
-```
+  - click on the green "Code" button on the right, then "Download ZIP"
+  - or through git:
+	```sh
+	git clone https://github.com/graphstream/graphadon.git
+	```
 
 In that project, we want the `Demos/` folder.
 
@@ -40,27 +46,27 @@ In that project, we want the `Demos/` folder.
 - Go to the [Eclipse download page](https://www.eclipse.org/downloads/packages/release/2024-06/r/eclipse-ide-java-developers)
 - On the right column, "Download Links", pick up your OS
 - Click the download button
-- Once downloaded, open the file. An eclipse folder is created.
-- Start Eclipse.
+- Once downloaded, open the file. An eclipse folder is created
+- Start Eclipse
 
 ---
 
 
 ## Open the workspace in the IDE
 
-- When asked about a workspace, indicate a new workspace or any existing one.
-- Go to menu `File > Import > Maven > Existing Maven Projects`.
-Browse to the project (`Demos/` folder), Eclipse should recognize the project.
+- When asked about your workspace, choose a new one or select an existing workspace.
+  
+- Navigate to `File > Import > Maven > Existing Maven Projects` in the menu.
 
-![eclipse-import-maven-projects](img/eclipse-import-maven-projects.png)
+- Locate your project in the `Demos/` folder. Eclipse will automatically recognize the project.
+
+<!-- centered image,controle the width, keep the aspect ratio -->
+  <img src="/img/eclipse-import-maven-projects.png" alt="Import Maven Projects in Eclipse" class="w-100" />
+
 
 ---
 
-## Get GraphStream binaries
-
-### With Maven
-
-- Dependencies are automatically resolved by maven in the `pom.xml` file :
+## Binaries and Compilation (with Maven)
 
 ```xml
 <!-- ... -->
@@ -77,21 +83,24 @@ Browse to the project (`Demos/` folder), Eclipse should recognize the project.
 <version>2.0</version>
 ```
 
-- In Eclipse : nothing to do!
+- Eclipse or other IDE will compile the project automatically.
 - Or on the command line : `mvn compile`
 
 ---
 
-## Get GraphStream binaries
+## Binaries and compilation (without Maven)
 
-### Without Maven
+<p class="text-4xl text-centered">😫</p>
 
-Binaries can be found on the GraphStream Download page  [graphstream-project.org/download/](http://graphstream-project.org/download/) :
+Binaries on the GraphStream Download page  [graphstream-project.org/download/](http://graphstream-project.org/download/) :
 
-- `gs-algo-1.3.zip`, `gs-core-1.3.zip`, `gs-ui-1.3.zip`.
-- Extract those zip file, and copy `gs-algo-1.3.jar`, `gs-core-1.3.jar`, `gs-ui-1.3.jar` to the `gs-talk-master/Demos/lib` folder of the project.
-- In Eclipse, select the project in the left panel and refresh the project (F5 key).
-- Right-clic on the project (`gs-talk`), then properties, then Java build path (left panel), then libraries (right panel), then clic the `Add Jars` button, and select our 3 jar files in the `gs-talk-master/Demos/lib/` folder.
+- `gs-algo-2.0.jar`, `gs-core-2.0.jar`, `gs-ui-swing-2.0.jar`
+- Copy them in the `lib/` folder of the `Demo` project.
+- On the command line:
+	
+	`cd /path/to/graphadon/Demo`
+
+	`javac -cp lib/gs-core-2.0.jar:lib/gs-algo-2.0.jar:lib/gs-ui-swing-2.0.jar  src/org/graphstream/tutorial/tutorial1/Tutorial1.java`
 
 
 ---
@@ -106,7 +115,6 @@ Binaries can be found on the GraphStream Download page  [graphstream-project.org
 
 - Open
 `src/org/graphstream/demo/tutorial1/Tutorial1.java`
-- Right-clic on `Tutorial1.java`, then `Run As > Java Application`
 
 ```java
 public class Tutorial1 {
@@ -123,7 +131,8 @@ public class Tutorial1 {
 }
 ```
 
-Maven command line: `mvn exec:java -Dexec.mainClass="org.graphstream.demo.tutorial1.Tutorial1"`
+- Maven : `mvn exec:java -Dexec.mainClass="org.graphstream.demo.tutorial1.Tutorial1"`
+- command line : `java -cp lib/gs-core-2.0.jar:lib/gs-algo-2.0.jar:lib/gs-ui-swing-2.0.jar:src  org.graphstream.tutorial.tutorial1.Tutorial1`
 
 ---
 
@@ -132,17 +141,17 @@ Maven command line: `mvn exec:java -Dexec.mainClass="org.graphstream.demo.tutori
 
 We can improve the display with some CSS:
 
-```java
+```java{4-10}
 ...
 graph.display();
 
-graph.addAttribute("ui.quality");
-graph.addAttribute("ui.antialias");
+graph.setAttribute("ui.quality");
+graph.setAttribute("ui.antialias");
 graph.setAttribute("ui.stylesheet", "" +
-                    "edge {" +
-                    "   size: 2px;" +
-                    "   fill-color: gray;" +
-                    "}");
+					"edge {" +
+					"   size: 3px;" +
+					"   fill-color: #D88;" +
+					"}");
 
 ...
 ```
@@ -309,7 +318,7 @@ node.getEachLeavingEdge().forEach({
 - A _sink_  is connected to a _source_ using the `Source.addSink(Sink)` method.
 - Events are filtered by type (_Elements Events_ and _Attributes Events_) :
     - `addElementSink(ElementSink)`.  Nodes and edges are _Elements_.
-    - `addAttributeSink(AttributeSink)`. Data attributes are stored on every element.
+    - `setAttributeSink(AttributeSink)`. Data attributes are stored on every element.
 - A `Sink` is both an `ElementSink` and `AttributeSink`.
 
 
@@ -363,7 +372,7 @@ A source is an interface that only defines methods to handle a set of sinks.
 public interface Source {
 	void addSink(Sink sink);
 	void removeSink(Sink sink);
-	void addAttributeSink(AttributeSink sink);
+	void setAttributeSink(AttributeSink sink);
 	void removeAttributeSink(AttributeSink sink);
 	void addElementSink(ElementSink sink);
 	void removeElementSink(ElementSink sink);
@@ -470,6 +479,7 @@ source.begin("data/tutorial2.dgs");
 while( source.nextEvents() );
 source.end();
 ```
+
 ![FileSource Pipeline](img/pipeline.svg)
 
 
@@ -492,19 +502,29 @@ while(source.nextStep()) { Thread.sleep(1000); }
 
 
 ## Graph Layout
-- By default the graph the spacial position of nodes on the display is automatically computed.
-- However one may want to position nodes by ourself.
-- One can do this using the `x` and `y` attributes:
 
-```c
-an "A" x=0 y=0.86
-an "B" x=1 y=-1
-an "C" x=-1 y=-1
+- Default: Node positions are automatically computed.
+- Custom: Manually position nodes.
+- Use `x` and `y` attributes to set positions.
+
+
+```c {3-6,10-11}
+an "C"
+cn "C" label="C"
+cn "A" x=0 y=0.86
+cn "B" x=1 y=-1
+cn "C" x=-1 y=-1
 // ...
-an "D" x=1 y=1
-an "E" x=-1 y=1
+st 2
+an "D" label="D"
+an "E" label="E"
+cn "D" x=1 y=1
+cn "E" x=-1 y=1
 ```
-Then one have to tell the viewer  not to compute nodes positions:
-```java
-graph.display(false);
-```
+
+- To disable automatic positioning:
+  ```java
+  graph.display(false);
+  ```
+
+  

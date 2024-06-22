@@ -1,0 +1,33 @@
+*.class
+bin/
+/target/
+
+
+#  JetBrains IDEs
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# Eclipse
+.project
+.classpath
+.metadata
+.settings/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+
+#Netbeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+.nb-gradle/
+
+#vscode
+.vscode/
