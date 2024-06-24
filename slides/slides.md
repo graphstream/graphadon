@@ -55,3 +55,7 @@ src: ./tutorials.md
 --- 
 src: ./communities.md
 --- 
+
+---
+src: ./schelling.md
+---
