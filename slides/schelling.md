@@ -20,7 +20,7 @@ image : /img/schelling_mid.png
 
 ---
 layout: image-right
-image : /img/schelling_fin.png
+image: /img/schelling_fin.png
 ---
 
 ## Dynamics
@@ -28,6 +28,10 @@ image : /img/schelling_fin.png
 - **Iteration**: Repeatedly check and move agents until stable state.
 - **Emergence**: Even mild preferences lead to significant segregation.
 - **Visualization**: Grid updates show evolving segregation patterns.
+
+<!--
+sdfgdfg
+-->
 
 ---
 
@@ -42,4 +46,3 @@ image : /img/schelling_fin.png
 ## Code the Schelling Model on a grid graph
 
 Fill the `TODO` comments in the code of the Schelling Model file : `src/org/graphstream/tutorial/schelling/Schelling.java`
-

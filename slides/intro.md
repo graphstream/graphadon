@@ -132,7 +132,7 @@ Build and maintain structures on dynamic graphs (e.g. spanning trees) **without*
 - Dynamic Algorithms
 - Dynamic Visualisation
 
-A free and open-Source project supported by the University of Le Havre.
+A free and open source project supported by the University of Le Havre.
 
 
 ---
