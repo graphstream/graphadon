@@ -1,7 +1,6 @@
 ---
 theme : ./
-title: Dynamic Graphs
-titleTemplate: "%s -- Graphadon"
+titleTemplate: "Graphadon"
 favicon: /img/gs-logo.svg
 ---
 
